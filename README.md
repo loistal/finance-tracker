@@ -1,24 +1,12 @@
-# README
+# Finance tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I built this app using RoR.
 
-Things you may want to cover:
+Features of the app:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Authentication system (devise) + edit profile
+* Users can track stocks (up to 10 per user)
+* Users can search for stocks, add and remove them from their portfolio
+* Users can look up friends, using names or emails
+* Users can see their friends' portfolio for investing ideas
+* The app is mobile responsive
