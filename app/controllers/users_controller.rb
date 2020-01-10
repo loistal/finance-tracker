@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
 
+	def show
+  	@user = User.find(params[:id])
+  	@user_stocks = @user.stocks
+	end
+
 	def add_friend
     @friend = User.find(params[:friend])
     current_user.friendships.build(friend_id: @friend.id)
