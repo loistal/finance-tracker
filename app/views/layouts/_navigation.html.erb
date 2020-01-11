@@ -1,6 +1,8 @@
 <div class="navbar navbar-default navbar-static-top">
     <div class="container">
-      <a class="navbar-brand" href="#">FinanceTracker</a>
+      <a class="navbar-brand" href="/">
+        🌎 STOKS TRAKER
+      </a>
       <% if current_user %>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
           <span class="icon-bar"></span>
@@ -11,8 +13,8 @@
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav col-md-6">
             <li><%= link_to "Portfolio", my_portfolio_path  %></li>
-            <li><%= link_to "Profile", edit_registration_path(current_user) %></li>
             <li><%= link_to "Friends", my_friends_path  %></li>
+            <li><%= link_to "Profile", edit_registration_path(current_user) %></li>
           </ul>
           <ul class="nav navbar-right col-md-4">
             <li class="col-md-8 user-name text-right">

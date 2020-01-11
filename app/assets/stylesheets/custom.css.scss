@@ -1,3 +1,75 @@
+body {
+  background-color: #0E2539;
+  color: white;
+  font-size: 14px;
+  line-height: 1.42857143;
+}
+
+h1 {
+  font-weight: bolder;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+th {
+  color: #98B0C6;
+}
+
+label {
+  color: #98B0C6;
+}
+
+hr {
+  border-color: #1F374D;
+  border-width: 2px;
+  margin-top: 100px;
+}
+
+a {
+  color: white;
+}
+
+footer {
+  margin-bottom: 20px;
+}
+
+.text-muted {
+  color: white;
+}
+
+.navbar-brand {
+  color: white !important;
+  font-weight: bolder;
+  font-size: 19px;
+}
+
+.btn {
+  background-image: linear-gradient(to right, #E1539F , #EF5B50);
+  text-transform: uppercase;
+  font-weight: 500;
+  border: none;
+}
+
+.btn:hover {
+  color: white;
+  background-image: linear-gradient(to right, #526DF5 , #3FC6E1);
+}
+
+.navbar-default {
+  background-color: #1F374D;
+  border-color: #1F374D;
+  color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #98B0C6;
+  font-weight: 500;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  color: white;
+}
+
 .logout {
   padding-left: 0;
 }
@@ -13,5 +85,96 @@
   }
   .btn-danger:hover {
     background-color: darken(#d9534f, 20%) !important;
+  }
+}
+
+#search-form-stocks {
+  margin-bottom: 30px;
+}
+
+.table-striped>tbody>tr:nth-child(odd) {
+  background-color: #1F374D;
+}
+
+.link-underline {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: white;
+  color: white;
+}
+
+.link-underline:hover {
+  color: #DBDBDB;
+}
+
+.results-block {
+  background-color: #E0F0D8;
+  border: none;
+  color: #467E47;
+}
+
+.label {
+  font-size: 1em;
+}
+
+#watch-stock-button {
+  float: right;
+  color: #467E47;
+  text-decoration-color: #467E47;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td,
+.table>tbody>tr>td, .table>tfoot>tr>td {
+  line-height: 3;
+  border: none;
+}
+
+#password-label {
+  margin-top: 20px;
+}
+
+#cancel-account {
+  text-decoration: underline;
+}
+
+#footer-logo {
+  font-weight: bolder;
+}
+
+#footer-credits {
+  color: #98B0C6;
+}
+
+#alert-search-stocks {
+  padding: 0;
+}
+
+.green-link {
+  color: #467E47;
+  text-decoration-color: #467E47;
+}
+
+@media screen and (max-width: 767px) {
+  #search-stocks-col {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+  #search-stocks-button {
+    width: 68%;
+  }
+
+
+  #friends-lookup-col {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 70%;
+  }
+
+  #search-button-friends {
+    width: 70%;
   }
 }

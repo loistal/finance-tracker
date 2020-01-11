@@ -1,4 +1,4 @@
-<h1>My Friends</h1>
+<h1 align="center">Friends</h1>
 
 <%= render 'friends/lookup' %>
 
@@ -22,9 +22,9 @@
           <td><%= friend.full_name %></td>
           <td><%= friend.email %></td>
           <td>
-            <%= link_to "View Profile", user_path(friend), class: "btn btn-primary btn-xs" %>
-            <%= link_to "Remove Friend", friendship_path(friend), method: :delete,
-              data: { confirm: "Are you sure?" }, class: "btn btn-xs btn-danger" %>
+            <%= link_to "Profile", user_path(friend), class: "link-underline" %>
+            <%= link_to "Unfollow", friendship_path(friend), method: :delete,
+              data: { confirm: "Are you sure?" }, class: "link-underline" %>
           </td>
         </tr>
       <% end %>

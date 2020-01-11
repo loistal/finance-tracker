@@ -1,24 +1,31 @@
-<h1>My portfolio</h1>
+<h1 align="center">My portfolio</h1>
 
-<h3>Search for stocks</h3>
-<div id="stock-lookup">
+<div id="stock-lookup" class="row">
   <%= form_tag "search_stocks", remote: true, method: :get, id: "stock-lookup-form" do %>
-    <div class="form-group row no-padding text-center col-md-12">
-      <div class="col-md-10">
-        <%= text_field_tag :stock, params[:stock], placeholder: "Stock ticker symbol",
-            autofocus: true, class: "form-control search-box input-lg" %>
-      </div>
-      <div class="col-md-2">
-        <%= button_tag(type: :submit, class: "btn btn-lg btn-success") do %>
-          🔎 Look up a stock
-        <% end %>
+    <div class="col-sm-3"></div>
+    <div id="search-form-stocks" class="form-group row no-padding text-center col-sm-6">
+      <div class="row">
+        <div id="search-stocks-col" class="col-sm-10">
+          <%= text_field_tag :stock, params[:stock], placeholder: "Stock ticker symbol",
+              autofocus: true, class: "form-control search-box input-lg" %>
+        </div>
+        <div class="col-sm-2">
+          <%= button_tag(type: :submit, class: "btn btn-lg", id: "search-stocks-button") do %>
+            SEARCH
+          <% end %>
+        </div>
       </div>
     </div>
+    <div class="col-sm-3"></div>
   <% end %>
 </div>
 
-<div id="results">
-  <%= render "result" %>
+<div id="results" class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <%= render "result" %>
+  </div>
+  <div class="col-md-3"></div>
 </div>
 
 <%= render 'stocks/list' %>
