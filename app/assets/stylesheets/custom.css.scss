@@ -154,6 +154,35 @@ footer {
   text-decoration-color: #467E47;
 }
 
+.green-link:hover {
+  color: #61AE62;
+  text-decoration-color: #61AE62;
+}
+
+.modal-body {
+  text-align: center;
+  padding: 50px;
+}
+
+.modal.in .modal-dialog {
+  width: 87%;
+}
+
+.modal-body>ul {
+  width: auto;
+  display:inline-block;
+  list-style-type: none;
+}
+
+.modal-body>ul>li>a {
+  color: black;
+}
+
+.modal-nav-link {
+  font-size: 2em;
+  color: black;
+}
+
 @media screen and (max-width: 767px) {
   #search-stocks-col {
     width: 70%;
@@ -176,5 +205,12 @@ footer {
 
   #search-button-friends {
     width: 70%;
+  }
+
+  #friends-lookup-col {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
   }
 }

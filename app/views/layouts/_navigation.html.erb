@@ -7,30 +7,47 @@
       </a>
       <% if current_user %>
 
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-items-links" aria-controls="#nav-items-links" aria-expanded="false" aria-label="Toggle navigation">
+        <button id="hamburger" type="button" class="navbar-toggle" aria-label="Toggle navigation">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
 
         <div id="nav-items-links" class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav col-md-6">
+          <ul class="nav navbar-nav">
             <li><%= link_to "Portfolio", my_portfolio_path  %></li>
             <li><%= link_to "Friends", my_friends_path  %></li>
             <li><%= link_to "Profile", edit_registration_path(current_user) %></li>
+            <li class="logout">
+              <%= link_to("Logout", destroy_user_session_path, method: :delete) %>
+            </li>
           </ul>
-          <ul class="nav navbar-right col-md-4">
-            <li class="col-md-8 user-name text-right">
+          <ul class="nav navbar-right">
+            <li class="user-name text-right">
               🖐
               <%= current_user.full_name.present? ? current_user.full_name : current_user.email %>
             </li>
-            <li class="col-md-4 logout">
-              <%= link_to("logout", destroy_user_session_path,
-                                  class: "btn btn-xs btn-danger", method: :delete) %>
-            </li>
+
           </ul>
         </div>
       <% end %>
     </div>
 
 </div>
+
+<% if current_user %>
+  <!-- Modal -->
+  <div class="modal fade" id="navigation-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+              <div><%= link_to("Portfolio", my_portfolio_path, class: "modal-nav-link") %></div>
+              <div><%= link_to("Friends", my_friends_path, class: "modal-nav-link") %></div>
+              <div><%= link_to("Profile", edit_registration_path(current_user), class: "modal-nav-link")%></div>
+              <div><%= link_to("Logout", destroy_user_session_path, class: "modal-nav-link", method: :delete) %></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+<% end %>
