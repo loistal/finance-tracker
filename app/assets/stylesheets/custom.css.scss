@@ -183,7 +183,13 @@ footer {
   color: black;
 }
 
+.last-name {
+  padding-right: 0;
+  padding-left: 10px;
+}
+
 @media screen and (max-width: 767px) {
+
   #search-stocks-col {
     width: 70%;
     margin-left: auto;
@@ -213,4 +219,13 @@ footer {
     margin-right: auto;
     margin-bottom: 10px;
   }
+}
+
+@media screen and (max-width: 893px) {
+
+  .last-name {
+    padding-top: 15px;
+    padding-left: 0;
+  }
+
 }

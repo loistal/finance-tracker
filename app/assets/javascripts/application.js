@@ -20,4 +20,5 @@ $(document).on('turbolinks:load', function(){
   $("#hamburger").click(function() {
     $('#navigation-modal').modal('show');
   });
+
 })
